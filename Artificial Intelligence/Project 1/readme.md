@@ -1,80 +1,108 @@
 # Brainstorming: Project 1 - Rule-Based AI Chatbot 
 
-### **What is this?**
+## **What is this?**
 
 This is the foundation phase of my **Artificial Intelligence Engineer** role at **DecodeLabs**. Instead of "learning" on its own, this chatbot uses a **Logic Engine** to follow my exact instructions.
 
----
-
-**The Plan (IPO Model)** 
-
-#### 1. Input (The Data Inflow) 
- 
-**Goal:** Get text from the user.
-
-**The Problem:** People type differently (e.g., "HELLO", " hello ", "Hello").
-
-* 
-**The Fix (Sanitization):** Use `.lower()` and `.strip()` to make the input "clean".
-
-
-
-#### 2. Process (The Logic Skeleton) 
- 
-**Goal:** Match the user's intent to a response.
-
-**The Tool:** Use **if-else logic** (Deterministic Guardrails).
-
-
-* **The Rules:**
-* Recognize **Greetings** (Hi/Hello).
-
-
-* Recognize **Exit Commands** (Bye/Exit) to stop the program.
-
-
-* Provide a **Fallback** for unknown words to ensure "Traceability" (no guessing).
-
-
-
-
-
-#### 3. Output (The Feedback Loop) 
-
-**Goal:** Print the answer and keep the conversation going.
-
-**The Tool:** A `while` loop to create a continuous digital interaction.
-
-
 
 ---
 
-### **Why am I doing this?**
+# How It Works
 
-* 
-**Safety:** It has zero "hallucination" risk because it is 100% hard-coded.
+## 1. Input
 
+The chatbot takes text from the user.
 
-* 
-**Control:** This "White Box" architecture is essential for sensitive fields like Finance or Healthcare.
+Example:
 
+```python id="kx6jqo"
+user_input = input("You: ")
+```
 
-* 
-**Foundation:** This logic layer acts as a "Guardrail" for modern AI models.
+### Cleaning the Input
 
+Users may type words in different ways like:
 
+* `HELLO`
+* `hello`
+* `Hello`
+
+To make the input easier to check, we use:
+
+```python id="b3o1zl"
+.lower()
+.strip()
+```
+
+Example:
+
+```python id="wt1y80"
+user_input = input("You: ").lower().strip()
+```
 
 ---
 
-### **Task Checklist**
+## 2. Process
 
-* [ ] Set up a `while` loop.
+The chatbot checks the message using `if-else` statements.
 
+Example:
 
-* [ ] Clean user input with `.lower()` and `.strip()`.
+```python id="3bkqzm"
+if user_input == "hello":
+    print("Bot: Hello!")
+```
 
+### Rules
 
-* [ ] Write `if-else` rules for "hello" and "exit".
+* If the user says `"hello"` → respond with a greeting
+* If the user says `"exit"` or `"bye"` → stop the chatbot
+* Anything else → show an unknown message
 
+Example:
 
-* [ ] Verify the quality to **Earn My Badge**.
+```python id="6v7qg2"
+if user_input == "hello":
+    print("Bot: Hello!")
+
+elif user_input == "bye":
+    print("Bot: Goodbye!")
+    break
+
+else:
+    print("Bot: I don't understand.")
+```
+
+---
+
+## 3. Output
+
+The chatbot prints a response and keeps running using a loop.
+
+Example:
+
+```python id="1v2j4c"
+while True:
+```
+
+---
+
+# Goal of the Project
+
+Learn how a basic chatbot works using:
+
+* User input
+* String cleaning
+* `if-else` conditions
+* Loops
+
+---
+
+# Task Checklist
+
+* [ ] Create a `while` loop
+* [ ] Use `.lower()` and `.strip()`
+* [ ] Add greeting responses
+* [ ] Add exit commands
+* [ ] Add fallback response
+* [ ] Test the chatbot
