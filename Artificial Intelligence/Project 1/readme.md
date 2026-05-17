@@ -1,4 +1,4 @@
-# Brainstorming: Project 1 - Rule-Based AI Chatbot 
+# Project 1 - Rule-Based AI Chatbot 
 
 ## **What is this?**
 
