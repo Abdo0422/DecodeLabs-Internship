@@ -8,29 +8,21 @@ This is the foundation phase of my **Artificial Intelligence Engineer** role at 
 
 **The Plan (IPO Model)** 
 
-#### 1. 
-
-Input (The Data Inflow) 
-
-* 
+#### 1. Input (The Data Inflow) 
+ 
 **Goal:** Get text from the user.
 
+**The Problem:** People type differently (e.g., "HELLO", " hello ", "Hello").
 
-* **The Problem:** People type differently (e.g., "HELLO", " hello ", "Hello").
 * 
 **The Fix (Sanitization):** Use `.lower()` and `.strip()` to make the input "clean".
 
 
 
-#### 2. 
-
-Process (The Logic Skeleton) 
-
-* 
+#### 2. Process (The Logic Skeleton) 
+ 
 **Goal:** Match the user's intent to a response.
 
-
-* 
 **The Tool:** Use **if-else logic** (Deterministic Guardrails).
 
 
@@ -47,15 +39,10 @@ Process (The Logic Skeleton)
 
 
 
-#### 3. 
+#### 3. Output (The Feedback Loop) 
 
-Output (The Feedback Loop) 
-
-* 
 **Goal:** Print the answer and keep the conversation going.
 
-
-* 
 **The Tool:** A `while` loop to create a continuous digital interaction.
 
 
